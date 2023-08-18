@@ -116,5 +116,6 @@ if __name__ == "__main__":
             backup_files.upload()
 
         if backup_files.name in uploaded_files_name_list:
-            backup_files.update(uploaded_files_dict["id"])
+            if backup_files.name == uploaded_files_dict["name"]:
+                backup_files.update(uploaded_files_dict["id"])
 
